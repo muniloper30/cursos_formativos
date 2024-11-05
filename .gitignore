@@ -1,0 +1,35 @@
+# Node.js modules
+node_modules/
+
+# Variables de entorno
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema operativo (OS)
+.DS_Store           # macOS
+Thumbs.db           # Windows
+.idea/              # Archivos de configuración de JetBrains/IntelliJ
+.vscode/            # Configuración de Visual Studio Code
+
+# Archivos de compilación
+dist/
+build/
+
+# Archivos temporales
+tmp/
+temp/
+
+# Directorios de prueba
+coverage/           # Resultados de cobertura de pruebas
+
+# Archivos de configuración y metadata
+*.sublime-project
+*.sublime-workspace
+*.log
+
+# Archivos de configuración para despliegue
+docker-compose.override.yml
