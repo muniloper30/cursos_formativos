@@ -41,7 +41,7 @@ body {
 }
 
 .hero {
-    background-image: url('/public/img/img_hero.jpg'); /* Imagen de fondo */
+    background-image: url('/img/img_hero.jpg'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
     padding: 60px 20px;
@@ -70,6 +70,8 @@ body {
 button {
     padding: 10px 20px;
     font-size: 16px;
+    font-weight: bold;
+    font-style: oblique;
     background-color: #FAC12A;
     color: #4a148c; 
     border: none;
@@ -144,4 +146,30 @@ button:hover {
     background-color: #e8e8e8;
     border-radius: 10px;
     text-align: left;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    gap: 10px; /* Espaciado entre los elementos */
 }
+
+.course-item h3{
+    text-align: center;
+}
+.course-iten p{
+    text-align: center;
+}
+
+/* Estilos para el Footer */
+.footer {
+    background-color: #4a148c; 
+    color: white; 
+    text-align: center; 
+    padding: 15px 0; 
+    margin-top: 40px; 
+    font-size: 1em;
+}
+
+/* Asegurar que el texto del footer tenga un pequeño espaciado */
+.footer p {
+    margin: 0;
+}
+
