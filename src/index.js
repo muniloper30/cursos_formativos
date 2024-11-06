@@ -6,7 +6,7 @@ import indexRoutes from './routes/index.routes.js'; // Importamos las rutas de i
 const app = express();// Creamos el servidor
 
 app.use(indexRoutes); // Usamos las rutas de index
-app.use(cursosRoutes); // Usamos las rutas de cursos
+app.use("/api",cursosRoutes); // Usamos las rutas de cursos
 
 
 app.listen(3000)
