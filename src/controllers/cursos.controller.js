@@ -9,6 +9,16 @@ export const getCursos = async(req, res) => {
     res.json(rows)//Enviamos la respuesta en formato JSON para poder tratarse en el frontend
 }
 
+// cursos.controller.js
+export const getCategorias = async (req, res) => {
+    const { categoria } = req.params;
+    const [rows] = await pool.query(
+        'SELECT * FROM catalogo_cursos WHERE LOWER(categoria) = LOWER(?)',
+        [categoria]
+    );
+    res.json(rows);
+};
+
 
 
 /*Funcion para crear un curso en especifico*/
