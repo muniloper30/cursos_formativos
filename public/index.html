@@ -27,22 +27,27 @@
             <p>Explora una amplia variedad de cursos en desarrollo web y tecnologías emergentes</p>
             <button id="loadCoursesBtn">Ver Catálogo de Cursos</button>
         </div>
-        <!-- Formulario de contacto -->
-        <div class="contact-form">
-            <h2>Solicita más información</h2>
-            <form>
-                <input type="text" placeholder="Nombre*" required>
-                <input type="text" placeholder="Apellidos*" required>
-                <input type="email" placeholder="E-mail*" required>
-                <input type="tel" placeholder="Teléfono*" required>
-                <select required>
-                    <option value="" disabled selected>Familia*</option>
-                    <option>Desarrollo Web</option>
-                    <option>Programación</option>
-                </select>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
+        <!-- Formulario de búsqueda -->
+<!-- Formulario de búsqueda por categoría -->
+<div class="search-form">
+    <h2>Busca tu curso</h2>
+    <form id="searchForm">
+        <label for="categoria"></label>
+        <select id="categoria" name="categoria">
+            <option value="Desarrollo Web">Desarrollo Web</option>
+            <option value="Programación">Programación</option>
+            <option value="Backend">Backend</option>
+            <option value="Frontend">Frontend</option>
+            <option value="Base de Datos">Base de Datos</option>
+            <option value="Ciberseguridad">Ciberseguridad</option>
+            <option value="Control de Versiones">Control de Versiones</option>
+            <option value="Ciencia de Datos">Ciencia de Datos</option>
+        </select>
+        <button type="submit">Buscar</button>
+    </form>
+</div>
+
+
     </section>
 
     <!-- Contenedor de cursos -->

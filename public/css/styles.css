@@ -50,8 +50,6 @@ body {
     color: white;
 }
 
-
-
 .hero-content {
     max-width: 50%;
 }
@@ -83,23 +81,34 @@ button:hover {
     background-color: #ffd600; /* Mas claro */
 }
 
-/* Estilo del formulario de contacto */
-.contact-form {
+.catalogo h2{
+    text-align: center;
+    margin: 40px 0;
+    color: black; 
+}
+
+
+/* Estilo del formulario de búsqueda */
+.search-form {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 30px;
     border-radius: 10px;
     width: 30%;
     text-align: left;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra suave */
+    position: relative; /* Asegura que los elementos hijos no se salgan */
 }
 
-.contact-form h2 {
+.search-form h2 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #4a148c; /* Morado */
+    text-align: center;
 }
 
-.contact-form input,
-.contact-form select {
+.search-form select,
+.search-form button {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -107,30 +116,44 @@ button:hover {
     border-radius: 5px;
 }
 
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #FAC12A; /* Amarillo */
-    color: #4a148c; /* Morado */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.search-form select {
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    height: 40px; /* Asegura que el select sea visible */
+    cursor: pointer; /* Muestra el cursor de mano para indicar que es seleccionable */
+    z-index: 10; /* Se asegura de que el select se vea por encima de otros elementos */
 }
 
-.contact-form button:hover {
+/* Ajuste para el botón */
+.search-form button {
+    background-color: #FAC12A; /* Amarillo */
+    color: #4a148c; /* Morado */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10; /* Para asegurarse de que el botón no cubra al select */
+}
+
+.search-form button:hover {
     background-color: #ffd600;
 }
 
-.catalogo {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f5f5f5;
+/* Hacer que el select no quede oculto por otros elementos */
+.search-form select:focus {
+    border-color: #4a148c;
+    outline: none; /* Para evitar bordes adicionales */
 }
 
-.catalogo h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #4a148c; /* Morado */
+
+
+/* Hacer que los resultados de búsqueda se vean bien */
+#searchResults {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .courses-list {
@@ -151,10 +174,19 @@ button:hover {
     gap: 10px; /* Espaciado entre los elementos */
 }
 
-.course-item h3{
+.course-item h3 {
     text-align: center;
+    font-size: 18px;
+    font-weight: bold;
 }
-.course-iten p{
+
+.course-item p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.course-category, .course-duration {
+    font-size: 14px;
     text-align: center;
 }
 
@@ -168,8 +200,48 @@ button:hover {
     font-size: 1em;
 }
 
-/* Asegurar que el texto del footer tenga un pequeño espaciado */
 .footer p {
     margin: 0;
 }
 
+
+.course-item {
+    width: 250px;
+    padding: 20px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    gap: 10px; /* Espaciado entre los elementos */
+}
+
+.course-item h3 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.course-item p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.course-category, .course-duration {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Estilos para el Footer */
+.footer {
+    background-color: #4a148c; 
+    color: white; 
+    text-align: center; 
+    padding: 15px 0; 
+    margin-top: 40px; 
+    font-size: 1em;
+}
+
+.footer p {
+    margin: 0;
+}
