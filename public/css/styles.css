@@ -40,6 +40,11 @@ body {
     text-decoration: underline;
 }
 
+.navbar-brand .span-nav {
+    color: #FAC12A; /* Amarillo */
+    font-size: 15px;
+}
+
 .hero {
     background-image: url('/img/img_hero.jpg'); /* Imagen de fondo */
     background-size: cover;
