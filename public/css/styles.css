@@ -1,252 +1,305 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .navbar {
-    background-color: #4a148c; /* Morado oscuro */
-    color: white;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #4a148c; /* Morado oscuro */
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
-    color: #FAC12A; /* Amarillo */
+  font-size: 24px;
+  font-weight: bold;
+  color: #fac12a; /* Amarillo */
 }
 
 .navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .navbar-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .navbar-menu a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .navbar-brand .span-nav {
-    color: #FAC12A; /* Amarillo */
-    font-size: 15px;
+  color: #fac12a; /* Amarillo */
+  font-size: 15px;
 }
 
 .hero {
-    background-image: url('/img/img_hero.jpg'); /* Imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    padding: 60px 20px;
-    display: flex;
-    justify-content: space-between;
-    color: white;
+  background-image: url("/img/img_hero.jpg"); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
 }
 
 .hero-content {
-    max-width: 50%;
+  max-width: 50%;
 }
 
 .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    color: #FAC12A; 
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #fac12a;
 }
 
 .hero-content p {
-    font-size: 20px;
-    margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
-button {
+.buscarCursos {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: oblique;
+  background-color: #fac12a;
+  color: #4a148c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buscarCursos:hover {
+  background-color: #ffd600; /* Mas claro */
+}
+
+#loadCoursesBtn {
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
     font-style: oblique;
-    background-color: #FAC12A;
-    color: #4a148c; 
+    background-color: #fac12a;
+    color: #4a148c;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
-button:hover {
-    background-color: #ffd600; /* Mas claro */
+.catalogo h2 {
+  text-align: center;
+  margin: 40px 0;
+  color: black;
 }
-
-.catalogo h2{
-    text-align: center;
-    margin: 40px 0;
-    color: black; 
-}
-
 
 /* Estilo del formulario de búsqueda */
 .search-form {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 10px;
-    width: 30%;
-    text-align: left;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra suave */
-    position: relative; /* Asegura que los elementos hijos no se salgan */
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  width: 30%;
+  text-align: left;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra suave */
+  position: relative; /* Asegura que los elementos hijos no se salgan */
 }
 
 .search-form h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #4a148c; /* Morado */
-    text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #4a148c; /* Morado */
+  text-align: center;
 }
 
 .search-form select,
 .search-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .search-form select {
-    font-size: 16px;
-    color: #333;
-    background-color: #fff;
-    height: 40px; /* Asegura que el select sea visible */
-    cursor: pointer; /* Muestra el cursor de mano para indicar que es seleccionable */
-    z-index: 10; /* Se asegura de que el select se vea por encima de otros elementos */
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  height: 40px; /* Asegura que el select sea visible */
+  cursor: pointer; /* Muestra el cursor de mano para indicar que es seleccionable */
+  z-index: 10; /* Se asegura de que el select se vea por encima de otros elementos */
 }
 
 /* Ajuste para el botón */
 .search-form button {
-    background-color: #FAC12A; /* Amarillo */
-    color: #4a148c; /* Morado */
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10; /* Para asegurarse de que el botón no cubra al select */
+  background-color: #fac12a; /* Amarillo */
+  color: #4a148c; /* Morado */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10; /* Para asegurarse de que el botón no cubra al select */
 }
 
 .search-form button:hover {
-    background-color: #ffd600;
+  background-color: #ffd600;
 }
 
 /* Hacer que el select no quede oculto por otros elementos */
 .search-form select:focus {
-    border-color: #4a148c;
-    outline: none; /* Para evitar bordes adicionales */
+  border-color: #4a148c;
+  outline: none; /* Para evitar bordes adicionales */
 }
-
-
 
 /* Hacer que los resultados de búsqueda se vean bien */
 #searchResults {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .courses-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .course-item {
-    width: 250px;
-    padding: 20px;
-    background-color: #e8e8e8;
-    border-radius: 10px;
-    text-align: left;
-    display: flex;
-    flex-direction: column; /* Asegura que los elementos estén en columna */
-    gap: 10px; /* Espaciado entre los elementos */
+  width: 250px;
+  padding: 20px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos estén en columna */
+  gap: 10px; /* Espaciado entre los elementos */
 }
 
 .course-item h3 {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .course-item p {
-    text-align: center;
-    font-size: 14px;
+  text-align: center;
+  font-size: 14px;
 }
 
-.course-category, .course-duration {
-    font-size: 14px;
-    text-align: center;
+.course-category,
+.course-duration {
+  font-size: 14px;
+  text-align: center;
 }
 
 /* Estilos para el Footer */
 .footer {
-    background-color: #4a148c; 
-    color: white; 
-    text-align: center; 
-    padding: 15px 0; 
-    margin-top: 40px; 
-    font-size: 1em;
+  background-color: #4a148c;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 1em;
 }
 
 .footer p {
-    margin: 0;
+  margin: 0;
 }
 
-
 .course-item {
-    width: 250px;
-    padding: 20px;
-    background-color: #e8e8e8;
-    border-radius: 10px;
-    text-align: left;
-    display: flex;
-    flex-direction: column; /* Asegura que los elementos estén en columna */
-    gap: 10px; /* Espaciado entre los elementos */
+  width: 250px;
+  padding: 20px;
+  background-color: #e8e8e8;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos estén en columna */
+  gap: 10px; /* Espaciado entre los elementos */
 }
 
 .course-item h3 {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .course-item p {
-    text-align: center;
-    font-size: 14px;
+  text-align: center;
+  font-size: 14px;
 }
 
-.course-category, .course-duration {
-    font-size: 14px;
-    text-align: center;
+.course-category,
+.course-duration {
+  font-size: 14px;
+  text-align: center;
 }
 
 /* Estilos para el Footer */
 .footer {
-    background-color: #4a148c; 
-    color: white; 
-    text-align: center; 
-    padding: 15px 0; 
-    margin-top: 40px; 
-    font-size: 1em;
+  background-color: #4a148c;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 1em;
 }
 
 .footer p {
-    margin: 0;
+  margin: 0;
+}
+
+/* Estilos para responsive */
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+    .navbar-menu {
+        margin-top: 1rem;
+    }
+
+    .navbar-menu a {
+        font-size: 0.6rem;
+    }
+
+
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+
+  .search-form {
+    width: 80%;
+  }
+
+  .courses-list {
+    width: 100%;
+  }
 }
