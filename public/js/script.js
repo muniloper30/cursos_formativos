@@ -1,7 +1,7 @@
 document.getElementById('loadCoursesBtn').addEventListener('click', () => {
     // Realizar la petición para obtener los cursos
     fetch('/api/cursos')
-        .then(response => response.json()) // Convertir la respuesta a JSON
+        .then(response => response.text()) // Convertir la respuesta a JSON
         .then(cursos => {
             // Obtener el contenedor donde se mostrarán los cursos
             const coursesList = document.getElementById('coursesList');
